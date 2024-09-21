@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Feedback Form</title>
+		<link rel="stylesheet" href="food_recipes.css">
+	</head>
+	
+	<header>
+		<h1>Feedback Form</h1>
+	</header>
+	<body>
+
+		<form id="feedbackForm">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" placeholder="Your name..." required>
+
+			<label for="email">Email:</label>
+			<input type="email" id="email" name="email" placeholder="Your email..." required>
+
+			<label for="subject">Subject:</label>
+			<input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+			<label for="message">Message:</label>
+			<textarea name="message" id="message" cols="30" rows="2" placeholder="Type your message here..." required></textarea>
+
+			<div id="formMessage" class="message" style="padding-left: 30px;" ></div>
+
+			<input type="button" id="submitButton" onclick="validateForm()" value="Submit" class="button">
+		</form>
+		<a href="homepage.html" style="font-size:14px;">Return to homepage</a>
+		<script>
+			function validateForm() {
+				event.preventDefault();
+
+				const name = document.getElementById('name').value;
+				const email = document.getElementById('email').value;
+				const subject = document.getElementById('subject').value;
+				const message = document.getElementById('message').value;
+				const formMessage = document.getElementById('formMessage');
+
+				formMessage.textContent = '';
+				formMessage.classList.remove('error', 'success');
+
+				if (name === '' || email === '' || subject === '' || message === '') {
+					formMessage.textContent = "Error: Please fill out all fields.";
+					formMessage.classList.add("error");
+				} else {
+					formMessage.textContent = "Success! Form submitted.";
+					formMessage.classList.add("success");
+
+					document.getElementById('name').value = '';
+					document.getElementById('email').value = '';
+					document.getElementById('subject').value = '';
+					document.getElementById('message').value = '';
+				}
+			}
+		</script>
+	</body>
+</html>

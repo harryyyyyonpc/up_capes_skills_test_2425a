@@ -1,0 +1,80 @@
+body {
+  background-color: cornsilk;
+}
+h1{
+  font-family: verdana;
+  padding-left:30px;
+  padding-top:20px;
+}
+h2{
+	font-family: verdana;
+	padding-left:30px;
+	padding-top:10px;
+}
+p,li {
+  font-family: sans-serif;
+  padding-left:30px;
+  list-style-position:inside;
+}
+a:link {
+	font-family: sans-serif;
+	color: dodgerblue;
+	text-decoration:none;
+	padding-left:30px;
+}	
+a:visited{
+	font-family: sans-serif;
+	color: mediumblue;
+	text-decoration:none;
+	padding-left:30px;
+}
+a:hover{
+	font-family: sans-serif;
+	color: darkcyan;
+	text-decoration:none;
+	padding-left:30px;
+}
+img {
+	padding-left:30px;
+}
+a{
+	padding-bottom:50px;
+}
+
+/* for form.html */
+label{
+	padding-left:30px;
+	font-family:sans-serif;
+}
+input[type=text], input[type=email],textarea{
+  width: 70%;
+  padding: 12px 15px;
+  font-family: sans-serif;
+  margin: 15px 30px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.button{
+	margin-left:30px;
+	margin-top:15px;
+	margin-bottom: 20px;
+	padding:5px 10px;
+	background-color: lightgreen;
+	border:1px solid #ccc;
+	border-radius: 2px;
+ }
+ .button:hover{
+	 background-color:darkseagreen;
+ }
+.success {
+	color: green;
+	font-family:sans-serif;
+}
+.error {
+	color: red;
+	font-family:sans-serif;
+}
+ 
+ 
